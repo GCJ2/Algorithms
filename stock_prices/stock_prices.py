@@ -6,19 +6,19 @@ import argparse
 def find_max_profit(prices):
     profit = 0
     sell_price = prices[0]
+    n = len(prices)
 
     for price in prices:
         sell_price = min(sell_price, price)
         profit_comparison = price - sell_price
         profit = max(profit_comparison, profit)
+    return profit
 
     # gunna try to brute force it
     # I'm sorry Big O
     # I have failed you
 
     # for i in range(prices):
-
-    return profit
 
 
 if __name__ == '__main__':
