@@ -39,4 +39,6 @@ subtract min_price from price for profit_comparison
 A[0] = 5; A[1] = 10; A[2] = 20
 min_price = 5; price = 10; profit_comparison = 5
 set profit to whatever is higher between current profit and profit_comparison 
+
+Okay this doesn't work with test 2
 '''
