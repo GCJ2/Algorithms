@@ -7,9 +7,7 @@ ingredients_test = {'milk': 198, 'butter': 52, 'cheese': 10}
 
 
 def recipe_batches(recipe, ingredients):
-    # put each item from recipe into a list by key
     recipe_item = list(recipe.keys())
-    # put each item from ingredient into a list by key
     # Can't seem to iterate through a dictionary the same way as a list
     # So pull out the values into a list
     ingredients_items = list(ingredients.keys())
