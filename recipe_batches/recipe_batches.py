@@ -9,12 +9,17 @@ ingredients_test = {'milk': 198, 'butter': 52, 'cheese': 10}
 def recipe_batches(recipe, ingredients):
     recipe_item = list(recipe.keys())
     ingredients_items = list(ingredients.keys())
-    # smallest_possible = ingredients_items[0] // recipe_item[0]
+    smallest_possible = ingredients[ingredients_items[0]] // recipe[recipe_item[0]]
     print(recipe[recipe_item[0]])
-    # print(recipe_item)
-    # print(ingredients_items)
+    print(smallest_possible)
     if len(recipe) != len(ingredients):
         return 0
+
+    for i in ingredients:
+        if ingredients[ingredients_items[i]] // recipe[recipe_item[i]] < smallest_possible:
+            smallest_possible = ingredients[ingredients_items[i]] // recipe[recipe_item[i]]
+            return smallest_possible
+
 
 
 recipe_batches(recipe_test, ingredients_test)
